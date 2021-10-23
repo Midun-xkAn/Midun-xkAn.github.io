@@ -43,14 +43,14 @@
         </tr>
     </table>
 	
-	<br><br/>
+	<p></p>
 	
 	<table width="100%">
 	    <tr>
-			<th align="left"  height="30" bgcolor="white"><font size="20" color="Silver" face="宋体">申请出校日期</font></th>
+			<td align="left"  height="80" bgcolor="white"><font size="20" color="Silver" face="宋体">申请出校日期</font></td>
 	    </tr>
 	    <tr>
-	        <td align="left" height="50" bgcolor="white" bordercolor="WhiteSmoke" border=1><p id="day"></p></td>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1><font size="30" color="black" face="宋体"><p id="day"></p></font></td>
 	    </tr>
 	</table>
 	
@@ -67,7 +67,13 @@
 		var suburl = url.split("?")[1]
 		document.getElementById('back').innerHTML = url;//2、在div节点上显示
 		document.getElementById('back1').innerHTML = suburl;//2、在div节点上显示
-		document.getElementById('day').innerHTML = Date();//2、在div节点上显示
+		
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth();
+		var year = date.getFullYear();
+
+		document.getElementById('day').innerHTML = String(year)+'-'+String(month)+'-'+String(day);//2、在div节点上显示
 		document.write(Date())
 	
 		
