@@ -26,7 +26,7 @@ if ( url.indexOf( "?" ) != -1 ) {  // 存在？，不存在就等于-1了
 		theRequest[ strs[ i ].split( "=" )[ 0 ] ] = ( strs[ i ].split( "=" )[ 1 ] );  
 	}  
 	// console.log(theRequest ); //此时的theRequest就是我们需要的参数；  
-	document.getElementById("back").appendChild(theRequest);
+	document.getElementById("back").appendChild(url);
 	
 </script>
 </html>
