@@ -29,16 +29,10 @@
 function login(){
 	var username = document.getElementById("name").value;
 	var password = document.getElementById("pass").value;
-	if(username=="l" && password=="1"){
-		alert("登录成功");
-		window.location.href = "login.html?username="+username+"&password="+password+"";
-		return false;
-		}
-	else{
-		alert("账号或密码错误");
-		window.location.href= "index.html";
-		return false;
-		}
+	
+	window.location.href = "login.html?username="+username+"&password="+password+"";
+	return false;
+		
 }
 
 </script>
