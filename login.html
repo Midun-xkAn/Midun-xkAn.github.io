@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	<div style="background:Gainsboro">
+	<div style="background:WhiteSmoke">
 	<!-- <img src="https://uploads.scratch.mit.edu/users/avatars/10099846.png"/> -->
 	
 	<body>
@@ -33,6 +33,31 @@
 	</div>
 	
 	再说点什么吧
+	
+	<table width="100%">
+        <tr>
+			<th align="left"  height="30" bgcolor="white">目的地</th>
+        </tr>
+        <tr>
+            <td align="left" height="50" bgcolor="white" bordercolor="WhiteSmoke" border=1>沈阳市内</td>
+        </tr>
+    </table>
+	
+	<br><br/>
+	
+	<table width="100%">
+	    <tr>
+			<th align="left"  height="30" bgcolor="white">申请出校日期</th>
+	    </tr>
+	    <tr>
+	        <td align="left" height="50" bgcolor="white" bordercolor="WhiteSmoke" border=1><p id="day"></p></td>
+	    </tr>
+	</table>
+	
+	<p></p>
+	
+	再写点
+
 
 
 		
@@ -42,6 +67,8 @@
 		var suburl = url.split("?")[1]
 		document.getElementById('back').innerHTML = url;//2、在div节点上显示
 		document.getElementById('back1').innerHTML = suburl;//2、在div节点上显示
+		document.getElementById('day').innerHTML = Date();//2、在div节点上显示
+		document.write(Date())
 	
 		
 	</script>
