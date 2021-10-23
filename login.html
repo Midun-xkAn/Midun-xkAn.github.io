@@ -8,9 +8,7 @@
 		<title></title>
 	</head>
 	<body>
-		全网发布：我爱李卓莹！
-		那么我们在新页面接收参数， 并且将参数转为可用的json格式时， 可以用下面的方法： 
-		
+
 		<div id="back"></div>
 	
 
@@ -25,8 +23,13 @@ if ( url.indexOf( "?" ) != -1 ) {  // 存在？，不存在就等于-1了
 	for ( var i = 0; i < strs.length; i++ ) {  
 		theRequest[ strs[ i ].split( "=" )[ 0 ] ] = ( strs[ i ].split( "=" )[ 1 ] );  
 	}  
-	// console.log(theRequest ); //此时的theRequest就是我们需要的参数；  
-	document.getElementById("back").appendChild(url);
+	// console.log(theRequest ); //此时的theRequest就是我们需要的参数；
+var a = 123
+document.getElementById("back").appendChild(url);
+document.write(a);//1、页面上显示a的值“123”
+document.getElementById('div').innerHTML = a;//2、在div节点上显示
+
 	
 </script>
+
 </html>
