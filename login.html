@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 
-
-
 <html>
 	<head>
 		<link href="css/xk.css" type="text/css" rel="stylesheet"/>
@@ -30,7 +28,7 @@
         </tr>
         <tr>
             <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
-				<font size="30" color="black" face="宋体">沈阳市内</font>
+				<font size="30" color="black" face="黑体">  沈阳市内</font>
 			</td>
         </tr>
     </table>
@@ -39,18 +37,142 @@
 	
 	<table width="100%">
 	    <tr>
-			<td valign="bottom" align="left"  height="80" bgcolor="white"><font size="15" color="Gray" face="宋体">  申请出校日期</font></td>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="Gray" face="宋体">  申请出校日期
+			</font></td>
 	    </tr>
 	    <tr>
-	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1><font size="30" color="black" face="宋体"><p id="day"></p></font></td>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					<p id="myday"></p>
+				</font>
+			</td>
 	    </tr>
 	</table>
 	
 	<p></p>
 	
-	再写点
+	<table width="100%">
+	    <tr>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="Gray" face="宋体">  申请返校日期
+				</font>
+			</td>
+	    </tr>
+	    <tr>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					<p id="myday"></p>
+				</font>
+			</td>
+	    </tr>
+	</table>
 	
-	<button onclick="cxz(getparm(0),getparm(1),getparm(2))">生成出校通行证</button>
+	<p></p>
+	
+	<table width="100%">
+	    <tr>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="Gray" face="宋体">  外出理由
+				</font>
+			</td>
+	    </tr>
+	    <tr>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					实习
+				</font>
+			</td>
+	    </tr>
+	</table>
+	
+	<p></p>
+	
+	<table width="100%">
+	    <tr>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="Gray" face="宋体">  实际出校时间
+				</font>
+			</td>
+	    </tr>
+	    <tr>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					<p id="myday"></p>
+				</font>
+			</td>
+	    </tr>
+	</table>
+	
+	<p></p>
+	
+	<table width="100%">
+	    <tr>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="Gray" face="宋体">  出校审批情况
+				</font>
+			</td>
+	    </tr>
+	    <tr>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					同意
+				</font>
+			</td>
+	    </tr>
+	</table>
+	
+	<p></p>
+	
+	<table width="100%">
+	    <tr>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="red" face="宋体">  行程轨迹
+				</font>
+			</td>
+	    </tr>
+	    <tr>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					从辽宁大学步行至北行，乘坐地铁至大东区
+				</font>
+			</td>
+	    </tr>
+	</table>
+	
+	<p></p>
+	
+	<table width="100%">
+	    <tr>
+			<td valign="bottom" align="left"  height="80" bgcolor="white">
+				<font size="15" color="Gray" face="宋体">  返校审批情况
+				</font>
+			</td>
+	    </tr>
+	    <tr>
+	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="黑体">
+					同意
+				</font>
+			</td>
+	    </tr>
+	</table>
+	
+	<p></p>
+	
+	<center>
+	
+		<button clonclick="cxz()"><font color="white">生成出校通行证</font></button>
+		<p></p>
+		<button clonclick="fxz()">生成返校通行证</button>
+		<p></p>
+		<button clonclick="log()">返回申请列表</button>
+		<p></p>
+		<p></p>
+		<img src="img/lndx.png" />
+	</center>
+	
+	
 
 
 
@@ -60,7 +182,7 @@
 		document.getElementById('suburl').innerHTML = '  '+getparm(0)+' '+getparm(1)+' '+getparm(2);//2、在div节点上显示
 
 // 		document.getElementById('userid').value = getparm(0);//2、在div节点上显示
-// 		document.getElementById('username').innerHTML = getparm(1);//2、在div节点上显示
+		// document.getElementById('username').innerHTML = getparm(1);//2、在div节点上显示
 // 		document.getElementById('usercollege').innerHTML = getparm(2);//2、在div节点上显示
 		// document.getElementById('userall').innerHTML = getparm(0)+' '+getparm(1)+' '+getparm(2);//2、在div节点上显示
 		
@@ -74,29 +196,44 @@
 // 		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
 // 		document.write(suburl)
 		
-		
+		var userid = getparm(0)
+		var username = getparm(1)
+		var usercollege = getparm(2)
 		
 		var date = new Date();
 		var day = date.getDate();
 		var month = date.getMonth();
 		var year = date.getFullYear();
 
-		document.getElementById('day').innerHTML = String(year)+'-'+String(month)+'-'+String(day);//2、在div节点上显示
-		document.write(Date())
+		document.getElementById('myday').innerHTML = String(year)+'-'+String(month)+'-'+String(day);//2、在div节点上显示
+		// document.write(Date())
 		
-	function cxz(userid, username, usercollege){ //出校证
-
-		window.location.href = encodeURI("cx.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"");
-		return false;
-			
-	}
+// 	function cxz(){ //出校证
+// 		
+// 		window.location.href = encodeURI("cx.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"");
+// 		return false;		
+// 	};
+// 	
+// 	function fxz(){ //返校证
+// 
+// 		window.location.href = encodeURI("fx.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"");
+// 		return false;		
+// 	};
+	
 	function getparm(keyidx){ //输入第几个关键字
 		var url = decodeURI(window.location.href);   
 		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
 		var subsuburl = suburl.split("&")[keyidx]; 
 		var keyzhi = subsuburl.split("=")[1]; 
 		return String(keyzhi);
-	}
+	};
+	
+// 	function log(){
+// 	
+// 		window.location.href = "index.html"); 
+// 		return false;
+// 			
+// 	};
 	
 		
 	</script>
