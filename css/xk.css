@@ -22,13 +22,21 @@ tr {
 	border-bottom: solid 5px WhiteSmoke;
 }
 
-.mydiv{
+.mydiv1
 	position: absolute;
-	top: 300px;
+	top: 150px;
+}
+.mydiv2
+	position: absolute;
+	top: 200px;
+}
+.mydiv3
+	position: absolute;
+	top: 250px;
 }
 
 #box {    
-	width:300px;    
+	width:250px; 
 	height:300px;    
 	filter:alpha(opacity=60);    
 	opacity:0.3;    
