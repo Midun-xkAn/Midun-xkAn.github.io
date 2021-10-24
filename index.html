@@ -56,8 +56,8 @@ function login(){
 	var userid = document.getElementById("id").value;
 	var username = document.getElementById("name").value;
 	var usercollege = document.getElementById("college").value;
-	
-	window.location.href = "login.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"";
+
+	window.location.href = encodeURI("login.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+""); //中文编码记得encodeurl
 	return false;
 		
 }

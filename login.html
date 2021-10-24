@@ -7,41 +7,31 @@
 	<head>
 		<link href="css/xk.css" type="text/css" rel="stylesheet"/>
 		<meta charset="utf-8">
-		<title></title>
+		<title>申请详情</title>
 	</head>
 	<div style="background:WhiteSmoke">
 	<!-- <img src="https://uploads.scratch.mit.edu/users/avatars/10099846.png"/> -->
 	
 	<body>
-		<p id="userid"></p>
-		<p id="username"></p>
-		<p id="usercollage"></p>
-		<p id="userall"></p>
+<!-- 		<p id="userid"></p>
+		<p id="usernema"></p> -->
+		<!-- <p id=""></p> -->
 		
-	
+	<hr width="100%" color="WhiteSmoke" />
 		
-	<div class="white-box">
-		Content
-	</div>
+		<font size="20" color="Gray" face="宋体"><div id="suburl"></div></font> 
 	
-	这里还有内容
-	<div class="white-box">
-		Content
-	</div>
-	
-	
-	<div class="white-box">
-		Content
-	</div>
-	
-	再说点什么吧
+	<hr width="100%" color="WhiteSmoke" />
+
 	
 	<table width="100%">
         <tr>
-			<th align="left"  height="30" bgcolor="white">目的地</th>
+			<td valign="bottom" align="left"  height="80" bgcolor="white"><font size="15" color="Gray" face="宋体">  目的地</font></td>
         </tr>
         <tr>
-            <td align="left" height="50" bgcolor="white" bordercolor="WhiteSmoke" border=1>沈阳市内</td>
+            <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1>
+				<font size="30" color="black" face="宋体">沈阳市内</font>
+			</td>
         </tr>
     </table>
 	
@@ -49,7 +39,7 @@
 	
 	<table width="100%">
 	    <tr>
-			<td align="left"  height="80" bgcolor="white"><font size="20" color="Gray" face="宋体">申请出校日期</font></td>
+			<td valign="bottom" align="left"  height="80" bgcolor="white"><font size="15" color="Gray" face="宋体">  申请出校日期</font></td>
 	    </tr>
 	    <tr>
 	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1><font size="30" color="black" face="宋体"><p id="day"></p></font></td>
@@ -66,11 +56,25 @@
 
 		
 	<script type="text/javascript">
+		
+		document.getElementById('suburl').innerHTML = '  '+getparm(0)+' '+getparm(1)+' '+getparm(2);//2、在div节点上显示
 
-		document.getElementById('userid').innerHTML = getparm(0);//2、在div节点上显示
-		document.getElementById('username').innerHTML = getparm(1);//2、在div节点上显示
-		document.getElementById('usercollege').innerHTML = getparm(2);//2、在div节点上显示
-		document.getElementById('userall').innerHTML = getparm(0)+' '+getparm(1)+' '+getparm(2);//2、在div节点上显示
+// 		document.getElementById('userid').value = getparm(0);//2、在div节点上显示
+// 		document.getElementById('username').innerHTML = getparm(1);//2、在div节点上显示
+// 		document.getElementById('usercollege').innerHTML = getparm(2);//2、在div节点上显示
+		// document.getElementById('userall').innerHTML = getparm(0)+' '+getparm(1)+' '+getparm(2);//2、在div节点上显示
+		
+// 		var url = decodeURI(window.location.href);   
+// 		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
+// 		var subsuburl = suburl.split("&")[2]; 
+// 		var keyzhi = subsuburl.split("=")[1]; 
+
+		
+// 		var url = decodeURI(window.location.href);  
+// 		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
+// 		document.write(suburl)
+		
+		
 		
 		var date = new Date();
 		var day = date.getDate();
@@ -82,16 +86,16 @@
 		
 	function cxz(userid, username, usercollege){ //出校证
 
-		window.location.href = "cx.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"";
+		window.location.href = encodeURI("cx.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"");
 		return false;
 			
 	}
 	function getparm(keyidx){ //输入第几个关键字
-		var url = window.location.href;  
+		var url = decodeURI(window.location.href);   
 		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
 		var subsuburl = suburl.split("&")[keyidx]; 
 		var keyzhi = subsuburl.split("=")[1]; 
-		return keyzhi;
+		return String(keyzhi);
 	}
 	
 		
