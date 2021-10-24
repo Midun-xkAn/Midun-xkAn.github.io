@@ -47,7 +47,7 @@
 	
 	<table width="100%">
 	    <tr>
-			<td align="left"  height="80" bgcolor="white"><font size="20" color="Silver" face="宋体">申请出校日期</font></td>
+			<td align="left"  height="80" bgcolor="white"><font size="20" color="Gray" face="宋体">申请出校日期</font></td>
 	    </tr>
 	    <tr>
 	        <td align="left" height="110" bgcolor="white" bordercolor="WhiteSmoke" border=1><font size="30" color="black" face="宋体"><p id="day"></p></font></td>
@@ -57,6 +57,8 @@
 	<p></p>
 	
 	再写点
+	
+	<button onclick="cxz()">生成出校通行证</button>
 
 
 
@@ -75,6 +77,14 @@
 
 		document.getElementById('day').innerHTML = String(year)+'-'+String(month)+'-'+String(day);//2、在div节点上显示
 		document.write(Date())
+		
+	function cxz(){
+		var username = 1
+		var password = 1
+		window.location.href = "cx.html?username="+username+"&password="+password+"";
+		return false;
+			
+	}
 	
 		
 	</script>

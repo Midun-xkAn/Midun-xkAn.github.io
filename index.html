@@ -2,23 +2,49 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <html lang="en">
 <head>
+<link href="css/xk.css" type="text/css" rel="stylesheet"/>
 <meta charset="UTF-8">
-<title>登录界面</title>
-<link rel="stylesheet" href="登录界面.css">
+<title>出校小网页</title>
+<!-- <link rel="stylesheet" href="登录界面.css"> -->
 </head>
 <center>
-<body>
+	
+<body background="img/background.jpg">
 <div class="login">
-<h1>Welcome</h1>
-<div class="text">
+<!-- <h1>Welcome</h1> -->
+
+
+
+<div id="wrap">    
+<div id="box">      
+
+<div class="mydiv">
 <i class="fa fa-user-o" aria-hidden="true"></i><!-- Font Awesome -->
-<input type="text" placeholder="Username" id="name">
+<input type="text" placeholder="学号" id="id" >
 </div>
+
+<br/> 
+
 <div class="text">
 <i class="fa fa-lock" aria-hidden="true"></i><!-- Font Awesome -->
-<input type="password" placeholder="Password" id="pass">
+<input type="password" placeholder="姓名" id="name">
 </div>
-<button onclick="login()">登录</button>
+
+<br/> 
+
+<div class="text">
+<i class="fa fa-user-o" aria-hidden="true"></i><!-- Font Awesome -->
+<input type="text" placeholder="学院" id="college">
+</div>
+
+<br/> 
+
+<button onclick="login()">提交</button>
+
+</div></div>
+
+
+
 </div>
 </body>
 </center>
@@ -27,10 +53,11 @@
 <script type="text/javascript">
 	
 function login(){
+	var userid = document.getElementById("id").value;
 	var username = document.getElementById("name").value;
-	var password = document.getElementById("pass").value;
+	var usercollege = document.getElementById("college").value;
 	
-	window.location.href = "login.html?username="+username+"&password="+password+"";
+	window.location.href = "login.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"";
 	return false;
 		
 }
