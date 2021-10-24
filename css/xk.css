@@ -24,7 +24,7 @@ tr {
 
 .mydiv1
 	position: absolute;
-	top: 150px;
+	margin-top: 150px;
 }
 .mydiv2
 	position: absolute;
@@ -47,3 +47,7 @@ tr {
 	padding:20px;    
 	font-size:14px;    
 	line-height:170%;}
+
+body{
+	background-size: auto;
+}

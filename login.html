@@ -13,10 +13,12 @@
 	<!-- <img src="https://uploads.scratch.mit.edu/users/avatars/10099846.png"/> -->
 	
 	<body>
-		<h1>我的第一个 Web 页面</h1>
+		<p id="userid"></p>
+		<p id="username"></p>
+		<p id="usercollage"></p>
+		<p id="userall"></p>
 		
-		<p id="back"></p>
-		<p id="back1"></p>
+	
 		
 	<div class="white-box">
 		Content
@@ -58,17 +60,17 @@
 	
 	再写点
 	
-	<button onclick="cxz()">生成出校通行证</button>
+	<button onclick="cxz(getparm(0),getparm(1),getparm(2))">生成出校通行证</button>
 
 
 
 		
 	<script type="text/javascript">
 
-		var url = window.location.href; //获取url中"?"符后的字串 ('?modFlag=business&role=1')  
-		var suburl = url.split("?")[1]
-		document.getElementById('back').innerHTML = url;//2、在div节点上显示
-		document.getElementById('back1').innerHTML = suburl;//2、在div节点上显示
+		document.getElementById('userid').innerHTML = getparm(0);//2、在div节点上显示
+		document.getElementById('username').innerHTML = getparm(1);//2、在div节点上显示
+		document.getElementById('usercollege').innerHTML = getparm(2);//2、在div节点上显示
+		document.getElementById('userall').innerHTML = getparm(0)+' '+getparm(1)+' '+getparm(2);//2、在div节点上显示
 		
 		var date = new Date();
 		var day = date.getDate();
@@ -78,12 +80,18 @@
 		document.getElementById('day').innerHTML = String(year)+'-'+String(month)+'-'+String(day);//2、在div节点上显示
 		document.write(Date())
 		
-	function cxz(){
-		var username = 1
-		var password = 1
-		window.location.href = "cx.html?username="+username+"&password="+password+"";
+	function cxz(userid, username, usercollege){ //出校证
+
+		window.location.href = "cx.html?userid="+userid+"&username="+username+"&usercollege="+usercollege+"";
 		return false;
 			
+	}
+	function getparm(keyidx){ //输入第几个关键字
+		var url = window.location.href;  
+		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
+		var subsuburl = suburl.split("&")[keyidx]; 
+		var keyzhi = subsuburl.split("=")[1]; 
+		return keyzhi;
 	}
 	
 		
