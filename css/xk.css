@@ -1,12 +1,3 @@
-/* .green-box {
-    padding: 16px 32px;
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    border: 2px solid #4CAF50;
-    border-radius:5px;
-    <!--other positioning attributes-->
-} */
 
 table {
   border-collapse:collapse;
@@ -19,19 +10,6 @@ table {
 
 
 
-/* .button1 {
-	padding: 16px 32px;
-	text-align: center;
-	background-color: #4CAF50;
-	color: white;
-	border: 2px solid #4CAF50;
-	border-radius:5px;
-}
-
-.button1:hover {
-	background-color: #4CAF50;
-	color: white;
-} */
 
 tr {
 	border-bottom: solid 1px WhiteSmoke;

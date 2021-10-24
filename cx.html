@@ -2,28 +2,66 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>出校通行证(两分钟内有效)</title>
 	</head>
 	<body>
-		<img src="img/back.gif" width="100%" height="500px" />
-		<font size="30" color="Gray" face="宋体">学生返校通行证</font>
+		<img src="img/go.gif" width="100%" height="500px" />
+		<font size="30" color="Gray" face="宋体">学生出校通行证</font>
+		
 		<hr width="100%" color="Gray" />
-		<font size="50" color="black" face="宋体">学号:</font>
+		
+		<div>
+			<img src="img/people.png" /> <font size="50" color="black" face="宋体" id="userid"></font>
+		</div>
+		<hr width="100%" color="Gray" />
+		
+		<div>
+			<img src="img/people.png" /> <font size="50" color="black" face="宋体" id="username"></font>
+		</div>
+		<hr width="100%" color="Gray" />
+		
+		<div>
+			<img src="img/people.png" /> <font size="50" color="black" face="宋体" id="usercollege"></font>
+		</div>
+		<hr width="100%" color="Gray" />
+		
+		<div>
+			<img src="img/time.png" /> <font size="50" color="black" face="宋体" id="day"></font>
+		</div>
+		<hr width="100%" color="Gray" />
+		
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<center>
+			<img src="img/lndx.png" />
+		</center>
+		
 	
 	<script type="text/javascript">
 	
-		var url = window.location.href; //获取url中"?"符后的字串 ('?modFlag=business&role=1')  
-		var suburl = url.split("?")[1]
-		document.getElementById('back').innerHTML = url;//2、在div节点上显示
-		document.getElementById('back1').innerHTML = suburl;//2、在div节点上显示
+		var userid = getparm(0)
+		var username = getparm(1)
+		var usercollege = getparm(2)
+		
+		document.getElementById('userid').innerHTML = '学号: '+userid
+		document.getElementById('username').innerHTML = '姓名: '+username
+		document.getElementById('usercollege').innerHTML = '学院: '+usercollege
 		
 		var date = new Date();
 		var day = date.getDate();
 		var month = date.getMonth();
 		var year = date.getFullYear();
+		var hour = date.getHours();
+		var minutes = date.getMinutes();
+		var seconds = date.getSeconds();
 	
-		document.getElementById('day').innerHTML = String(year)+'-'+String(month)+'-'+String(day);//2、在div节点上显示
-		document.write(Date())
+		document.getElementById('day').innerHTML = '时间: '+String(year)+'/'+String(month)+'/'+String(day)+' '
+		+String(hour)+':'+String(minutes)+':'+String(seconds);
+		//2、在div节点上显示
+		
 		
 	function cxz(){
 		var username = 1
@@ -33,6 +71,13 @@
 			
 	}
 	
+	function getparm(keyidx){ //输入第几个关键字
+		var url = decodeURI(window.location.href);   
+		var suburl = url.split("?")[1]; //获取url中"?"符后的字串 userid=20172221146&username=11&usercollege=256
+		var subsuburl = suburl.split("&")[keyidx]; 
+		var keyzhi = subsuburl.split("=")[1]; 
+		return String(keyzhi);
+	}
 		
 	</script>
 		
