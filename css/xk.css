@@ -15,18 +15,8 @@ tr {
 	border-bottom: solid 1px WhiteSmoke;
 }
 
-.mydiv1
-	position: absolute;
-	margin-top: 150px;
-}
-.mydiv2
-	position: absolute;
-	top: 200px;
-}
-.mydiv3
-	position: absolute;
-	top: 250px;
-}
+
+
 
 #box {    
 	width:250px; 

@@ -57,9 +57,9 @@
 		var username = getparm(1)
 		var usercollege = getparm(2)
 		
-		document.getElementById('userid').innerHTML = '学号: '+userid
-		document.getElementById('username').innerHTML = '姓名: '+username
-		document.getElementById('usercollege').innerHTML = '学院: '+usercollege
+		document.getElementById('userid').innerHTML = '&nbsp;'+'学号: '+userid
+		document.getElementById('username').innerHTML = '&nbsp;'+'姓名: '+username
+		document.getElementById('usercollege').innerHTML = '&nbsp;'+'学院: '+usercollege
 		
 		var date = new Date();
 		var day = date.getDate();
@@ -69,7 +69,7 @@
 		var minutes = date.getMinutes().toString().padStart(2,'0');
 		var seconds = date.getSeconds().toString().padStart(2,'0');
 	
-		document.getElementById('day').innerHTML = '时间: '+String(year)+'/'+String(month)+'/'+String(day)+' '
+		document.getElementById('day').innerHTML = '&nbsp;'+'时间: '+String(year)+'/'+String(month)+'/'+String(day)+' '
 		+String(hour)+':'+String(minutes)+':'+String(seconds);
 		//2、在div节点上显示
 		
